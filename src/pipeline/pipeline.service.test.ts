@@ -16,8 +16,8 @@ it('pipeline', async () => {
 
 it('create-tasks', async () => {
     return createInsightsPipelineTasks({
-        start: '2023-10-01',
-        end: '2023-11-01',
+        start: '2023-01-01',
+        end: '2023-03-01',
     })
         .then((result) => expect(result).toBeDefined())
         .catch((error) => {

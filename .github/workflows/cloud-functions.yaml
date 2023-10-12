@@ -41,6 +41,7 @@ jobs:
       - uses: google-github-actions/setup-gcloud@v0
 
       - run: |
+          echo "DOPPLER_TOKEN: ${{ secrets.DOPPLER_TOKEN }}" >> ${{ env.ENV_FILE }}
           echo "PUBLIC_URL: ${{ env.PUBLIC_URL }}" >> ${{ env.ENV_FILE }}
 
       - run: >-
