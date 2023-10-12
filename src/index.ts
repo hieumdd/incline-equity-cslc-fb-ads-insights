@@ -8,22 +8,12 @@ import {
 } from './pipeline/pipeline.request.dto';
 import * as pipelines from './pipeline/pipeline.const';
 import { runPipeline, createInsightsPipelineTasks } from './pipeline/pipeline.service';
-import { refreshToken } from './facebook/token.service';
 
 const app = express();
 
 app.use(({ headers, path, body }, _, next) => {
     logger.info({ headers, path, body });
     next();
-});
-
-app.use('/refresh-token', (_, res) => {
-    refreshToken()
-        .then((result) => res.status(200).json({ result }))
-        .catch((error) => {
-            logger.error({ error });
-            res.status(500).json({ error });
-        });
 });
 
 app.use('/task', ({ body }, res) => {
