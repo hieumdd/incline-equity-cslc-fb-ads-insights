@@ -4,7 +4,7 @@ import { logger } from './logging.service';
 
 const client = new BigQuery();
 
-const DATASET = 'Rosen_V2';
+const DATASET = 'Facebook';
 
 export type CreateLoadStreamConfig = {
     schema: Record<string, any>[];
