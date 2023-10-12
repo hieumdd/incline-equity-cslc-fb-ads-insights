@@ -8,7 +8,7 @@ concurrency: ${{ github.ref }}
 
 env:
   PROJECT_ID: incline-equity-cslc
-  GCP_SA: integration-1@lead-docket-connector.iam.gserviceaccount.com
+  GCP_SA: integration-1@incline-equity-cslc.iam.gserviceaccount.com
 
   FUNCTION_NAME: incline-equity-cslc-ads-insights-${{ github.ref_name }}
   PUBLIC_URL: https://us-central1-incline-equity-cslc.cloudfunctions.net/incline-equity-cslc-ads-insights-${{ github.ref_name }}
